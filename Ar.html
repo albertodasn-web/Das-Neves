@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Hospedagem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .box {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .hi {
+      color: #ef120a;
+      font-weight: bold;
+    }
+    button {
+      background: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hospedagem</h1>
+
+  <div class="box">
+    <h2>O que é Hospedagem?</h2>
+    <p>A <span class="hi">hospedagem</span> é o espaço ou um lugar onde uma pessoa pode ficar por um determinado tempo.</p>
+  </div>
+
+  <div class="box">
+    <h2>Diferença entre Domínio e Hospedagem</h2>
+    <ul>
+    
+      <li><strong>Hospedagem</strong> é a casa em si, onde ficam os móveis.</li>
+       <li><strong>Domínio</strong> é o lugar, quarterão ou o bairro onde a pessoa fica.(endereço)</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Como Publicar um Site Simples</h2>
+    <ol>
+      <li>Registrar um domínio.</li>
+      <li>Contratar uma hospedagem.</li>
+      <li>Enviar os arquivos HTML, CSS e JavaScript para o servidor.</li>
+      <li>Pronto! Seu site estará acessível pelo domínio.</li>
+    </ol>
+  </div>
+
+  <div class="box">
+    <h2>Tipos de Hospedagem</h2>
+    <ul>
+      <li><strong>Hospedagem Compartilhada:</strong> vários sites dividem o mesmo servidor.</li>
+      <li><strong>Hospedagem VPS:</strong> cada site tem uma parte dedicada do servidor.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <p>Clique no botão para ver um resumo rápido:</p>
+    <button onclick="mostrarResumo()">Mostrar Resumo</button>
+    <p id="resumo"></p>
+  </div>
+
+  <script>
+    function mostrarResumo() {
+      document.getElementById("resumo").innerHTML = 
+        "Hospedagem é espaço onde os arquivos ficam. e o Domínio é endereço do site. " +
+        "Para publicar um site simples é necessario registar-se a domínio, contrate hospedagem e envie os arquivos.";
+    }
+  </script>
+</body>
+</html>
