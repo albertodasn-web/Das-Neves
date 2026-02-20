@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - GovRegisto</title>
     <style>
+    
         * {
             margin: 0;
             padding: 0;
@@ -21,11 +22,12 @@
             align-items: center;
         }
 
+        
         .login-container {
             text-align: center;
             width: 100%;
             max-width: 350px;
-            padding: 20px;
+            padding: -9px;
         }
 
         h1 {
@@ -35,6 +37,7 @@
             line-height: 1.2;
         }
 
+        
         .form-group {
             text-align: left;
             margin-bottom: 15px;
@@ -50,24 +53,18 @@
         input {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid white;
+            border: 1px solid #e2e8f0;
             border-radius: 8px;
             background-color: white;
             font-size: 14px;
             outline: none;
         }
 
-        input:focus {
-            border-color: #4f70ff;
+        input::placeholder {
+            color: #cbd5e1;
         }
 
-        #error-message {
-            color: #ef4444;
-            font-size: 12px;
-            margin-bottom: 10px;
-            display: none;
-        }
-
+        
         .btn-entrar {
             width: 100%;
             background-color: #4f70ff; 
@@ -81,11 +78,17 @@
             margin-top: 10px;
             transition: background 0.3s;
         }
+        a{
+            text-decoration:none;
+            color:#cbd5e1
+            
+        }
 
         .btn-entrar:hover {
             background-color: #3b5bdb;
         }
 
+        
         .links {
             margin-top: 20px;
         }
@@ -97,10 +100,12 @@
             font-size: 13px;
             margin-bottom: 8px;
         }
+    
 
         .links a:hover {
             text-decoration: underline;
         }
+        
     </style>
 </head>
 <body>
@@ -108,20 +113,18 @@
     <div class="login-container">
         <h1>Bem-Vindo<br>A GovRegisto</h1>
 
-        <p id="error-message">E-mail inválido. Deve conter @ e terminar em .com</p>
-
-        <form id="loginForm">
+        <form>
             <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="Escreva o seu Email" required>
+                <label>E-mail</label>
+                <input type="email" placeholder="Escreva o seu Email">
             </div>
 
             <div class="form-group">
-                <label for="password">Palavra-passe</label>
-                <input type="password" id="password" placeholder="Escreva a tua senha" required>
+                <label>Palavra-passe</label>
+                <input type="password" placeholder="Escreva a tua senha">
             </div>
 
-            <button type="submit" class="btn-entrar">Entrar</button>
+            <button type="submit" class="btn-entrar"><a href="p1.html"> Entrar</button></a>
         </form>
 
         <div class="links">
@@ -130,25 +133,33 @@
         </div>
     </div>
 <script>
-        document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
+        const loginForm = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const errorMessage = document.getElementById('error-message');
 
-        const emailInput = document.querySelector('input[type="email"]');
-        const email = emailInput.value;
-        
-        // Regex que valida o @ e o final .com
-        const emailRegex = /^[^\s@]+@[^\s@]+\.com$/;
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
 
-        if (!emailRegex.test(email)) {
-            alert("Por favor, insira um e-mail válido que termine em .com");
-            emailInput.focus();
-            return;
-        }
+            const emailValue = emailInput.value;
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.com$/;
 
-        // Se passar na validação, redireciona
-        window.location.href = "p1.html";
-    });
+            if (emailRegex.test(emailValue)) {
+                errorMessage.style.display = 'none';
+                console.log("Login autorizado para:", emailValue);
+                window.location.href = "p1.html";
+            } else {
+                errorMessage.style.display = 'block';
+                emailInput.style.borderColor = '#ef4444';
+                emailInput.focus();
+            }
+        });
+
+        emailInput.addEventListener('input', function() {
+            errorMessage.style.display = 'none';
+            emailInput.style.borderColor = '#e2e8f0';
+        });
     </script>
-</script>
+
 </body>
 </html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Cédula Pessoal</title>
+
+<style>
+
+body {
+    background: #cfd8ea;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: #f4f6fb;
+    width: 420px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.topo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 5px;
+}
+
+.topo h3 {
+    font-size: 15px;
+    margin: 3px 0;
+    font-weight: bold;
+}
+
+.topo p {
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+.titulo {
+    font-size: 16px;
+    margin-top: 8px;
+    padding: 5px 0;
+    border-top: 2px solid #8aa1c7;
+    border-bottom: 2px solid #8aa1c7;
+
+}
+
+
+form {
+    margin-top: 15px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    background: #cfd8ea;
+    margin-top: 5px;
+    margin-left: -6px;
+}
+
+
+.assento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.assento input {
+    flex: 1;
+}
+
+
+.assinatura-box {
+    background: #cfd8ea;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #8aa1c7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6d88b5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="topo">
+        <img src="images-removebg-preview (2).png" class="logo">
+        <h3>República de Moçambique</h3>
+        <p>Ministério da Justiça, Assuntos Constitucionais e Religiosos</p>
+        <p>Direcção Nacional dos Registos e Notariado</p>
+        <div class="titulo">Cédula pessoal</div>
+    </div>
+
+    <form>
+
+        <label>Nome</label>
+        <input type="text">
+
+        <label>Filho de</label>
+        <input type="text">
+
+        <label>Natural de</label>
+        <input type="text">
+
+        <label>Distrito de</label>
+        <input type="text">
+
+        <label>E de</label>
+        <input type="text">
+
+        <label>Natural de</label>
+        <input type="text">
+
+        <label>Distrito de</label>
+        <input type="text">
+
+        <label>Data de nascimento</label>
+        <input type="date">
+
+        <label>Assento nº</label>
+        <div class="assento">
+            <input type="number">
+            <span>De</span>
+            <input type="number">
+        </div>
+
+        <label>Nome do conservador</label>
+        <input type="text">
+
+        <label>Assinatura do conservador</label>
+        <div class="assinatura-box"></div>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

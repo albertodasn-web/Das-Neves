@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="go2.css">
+</head>
+<body>
+    <style>
+        
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+
+body {
+  background-color: #dfe6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 360px;
+  padding: 24px;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 28px;
+  height: auto;
+}
+
+.header span {
+  font-size: 14px;
+  font-weight: 600;
+  color:  #4f6ef7;
+}
+
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+
+label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+  color: #000;
+}
+
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row input {
+  flex: 1;
+}
+
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4f6ef7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #3f4ab0;
+}
+a{
+  text-decoration: none;
+}
+h1{
+    color: #3f4ab0;
+}
+.idate{
+  color: #525151;
+}
+p{
+  color: #fff;
+  
+}
+
+    </style>
+    <div class="container">
+  <div class="header">
+
+    <h1>GovRegisto</h1>
+  </div>
+
+  <h2>Criar Conta</h2>
+
+  <label>Nome completo</label>
+ <input type="text" name="name" id="name" required placeholder="Escreva o seu Nome completo">
+
+  <label>Data de nascimento</label>
+  <input type="date" name="data" id="idata">
+
+  <div class="row">
+    <div>
+      <label>Província</label>
+      <input type="text" name="province" id="province" required placeholder="Escreva a tua provincia">
+    </div>
+    <div>
+      <label>Distrito</label>
+      <input type="text" name="District" id="District" required placeholder="Escreva  teu Distrito">
+    </div>
+  </div>
+
+  <label>Telefone</label>
+  <input type="number" name="numero" id="itelefone" required placeholder="Escreva o seu numero">
+
+  <label>Email</label>
+  <input type="email" name="Email" id="iemail" required placeholder="Escreva o seu Email">
+
+  <button> <a href="p1.html" target="_blank"> <p>Continuar</p></a></button>
+</div>
+
+</body>
+</html>

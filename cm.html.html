@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Certidão de Casamento</title>
+
+<style>
+
+body {
+    background: #cfd8ea;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: #f4f6fb;
+    width: 420px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.topo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 5px;
+}
+
+.topo h3 {
+    font-size: 15px;
+    margin: 3px 0;
+    font-weight: bold;
+}
+
+.topo p {
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+.titulo {
+    font-size: 16px;
+    margin-top: 8px;
+    padding: 5px 0;
+    border-top: 2px solid #8aa1c7;
+    border-bottom: 2px solid #8aa1c7;
+}
+
+form {
+    margin-top: 15px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    background: #cfd8ea;
+    margin-top: 5px;
+    margin-left: -6px;
+}
+
+.filiacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filiacao input {
+    flex: 1;
+   
+}
+
+.assinaturas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.assinatura-box {
+    background: #cfd8ea;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.assinatura-centro {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.assinatura-centro .assinatura-box {
+    height: 50px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #8aa1c7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6d88b5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="topo">
+        <img src="images-removebg-preview (2).png" class="logo">
+        <h3>República de Moçambique</h3>
+        <p>Ministério da Justiça, Assuntos Constitucionais e Religiosos</p>
+        <p>Direcção Nacional dos Registos e Notariado</p>
+        <div class="titulo">Certidão de Casamento</div>
+    </div>
+
+    <form>
+
+        <label>Nome Do Noivo</label>
+        <input type="text">
+
+        <label>Data De Nascimento</label>
+        <input type="text">
+
+        <label>Local de Nascimento</label>
+        <input type="text">
+
+        <label>A filiação</label>
+        <div class="filiacao">
+            <input type="text">
+            <span>De</span>
+            <input type="text">
+        </div>
+
+        <label>Casado Com</label>
+        <input type="text">
+
+        <label>Nome Da Noiva</label>
+        <input type="text">
+
+        <label>Data De Nascimento</label>
+        <input type="text">
+
+        <label>Local de Nascimento</label>
+        <input type="text">
+
+        <label>A filiação</label>
+        <div class="filiacao">
+            <input type="text">
+            <span>De</span>
+            <input type="text">
+        </div>
+
+        <div class="assinaturas">
+            <div>
+                <label>Assinatura Do Noivo</label>
+                <div class="assinatura-box"></div>
+            </div>
+
+            <div>
+                <label>Assinatura Da Noiva</label>
+                <div class="assinatura-box"></div>
+            </div>
+
+            <div>
+                <label>Testemunho Do Casamento</label>
+                <div class="assinatura-box"></div>
+            </div>
+
+            <div>
+                <label>Testemunho Do Casamento</label>
+                <div class="assinatura-box"></div>
+            </div>
+        </div>
+
+        <div class="assinatura-centro">
+            <label>Assinatura Do Responsavel</label>
+            <div class="assinatura-box"></div>
+        </div>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

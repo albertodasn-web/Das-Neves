@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Conta - GovRegisto</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #dbeafe; 
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2e3b8e;
+        }
+
+        
+        .recovery-container {
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #6a82cf;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            background-color: white;
+            font-size: 15px;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        input:focus {
+            border-color: #4f70ff;
+        }
+
+        
+        .btn-recover {
+            width: 100%;
+            background-color: #4f70ff; 
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-recover:hover {
+            background-color: #3b5bdb;
+        }
+
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 25px;
+            color: #7991e8;
+            text-decoration: none; 
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            color: #2e3b8e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="recovery-container">
+        <h1>Recuperar<br>Sua Conta</h1>
+        <p>Insira o e-mail associado à sua conta GovRegisto para receber as instruções de redefinição.</p>
+
+        <form id="recoveryForm"  >
+            <div class="form-group">
+                <label>E-mail de Recuperação</label>
+                <input type="email" id="email" placeholder="Escreva o seu Email" required>
+            </div>
+<button type="submit" class="btn-recover" id="btnSubmit">Enviar Instruções</button>
+        </form>
+
+        <a href="log1.html" class="back-link">Voltar para o Login</a>
+
+
+<script>
+    document.getElementById('recoveryForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const email = document.getElementById('email').value;
+        const btn = document.getElementById('btnSubmit');
+
+        
+        btn.innerText = "Enviando...";
+        btn.disabled = true;
+        btn.style.backgroundColor = "#64748b";
+
+        
+        setTimeout(() => {
+            alert(`Sucesso! Instruções enviadas para: ${email}`);
+            
+            
+            btn.innerText = "Enviar Instruções";
+            btn.disabled = false;
+            btn.style.backgroundColor = "#4f70ff";
+            
+            
+        }, 1500);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Dados - GovRegisto</title>
+    <style>
+        /* Estilos Baseados na Imagem */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #dbeafe; /* Mesmo azul claro do fundo da imagem */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .update-container {
+            background: white;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            border-radius: 20px; /* Bordas arredondadas como nos cards */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .badge {
+            background-color: #fbbf24; /* Amarelo GovRegisto */
+            color: black;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #2563eb; /* Azul dos títulos da imagem */
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            background-color: #f8fafc;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #3b82f6;
+        }
+
+        .btn-update {
+            background-color: #3b82f6; /* Azul do botão "Seguinte" */
+            color: white;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 30px; /* Botão bem arredondado */
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-update:hover {
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: #3b82f6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="update-container">
+        <div class="badge">GovRegisto</div>
+        <h2>Atualizar Dados</h2>
+        <p>Preencha os campos abaixo para manter seu registro civil digital atualizado.</p>
+
+        <form>
+            <div class="input-group">
+                <label>NOME COMPLETO</label>
+                <input type="text" placeholder="Como consta no documento">
+            </div>
+
+            <div class="input-group">
+                <label>NÚMERO DO DOCUMENTO</label>
+                <input type="text" placeholder="BI ou Assento de Nascimento">
+            </div>
+
+            <div class="input-group">
+                <label>NOVO TELEFONE</label>
+                <input type="tel" placeholder="+258 ...">
+            </div>
+
+            <button type="submit" class="btn-update">Salvar Alterações</button>
+        </form>
+
+        <center><a href="p1.html"  class="back-link">Voltar ao início</a></center>
+    </div>
+
+</body>
+</html>

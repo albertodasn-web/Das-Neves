@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Certidão de Óbito</title>
+
+<style>
+
+body {
+    background: #cfd8ea;
+     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: #f4f6fb;
+    width: 420px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+.topo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 5px;
+}
+
+.topo h3 {
+    font-size: 15px;
+    margin: 3px 0;
+    font-weight: bold;
+}
+
+.topo p {
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+.titulo {
+    font-size: 16px;
+    margin-top: 8px;
+    padding: 5px 0;
+    border-top: 2px solid #8aa1c7;
+    border-bottom: 2px solid #8aa1c7;
+}
+
+
+form {
+    margin-top: 15px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    background: #cfd8ea;
+    margin-top: 5px;
+    margin-left: -7px;
+}
+
+
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 15px;
+}
+
+
+.radio-group {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.filiacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filiacao input {
+    flex: 1;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #8aa1c7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6d88b5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="topo">
+        <img src="images-removebg-preview (2).png" class="logo">
+        <h3>República de Moçambique</h3>
+        <p>Ministério da Justiça, Assuntos Constitucionais e Religiosos</p>
+        <p>Direcção Nacional dos Registos e Notariado</p>
+        <div class="titulo">Certidão de Óbito</div>
+    </div>
+
+    <form>
+
+        <label>Nome do Falecido</label>
+        <input type="text">
+
+        <label>Apelido</label>
+        <input type="text">
+
+        <div class="duas-colunas">
+            <div>
+                <label>Estado civil</label>
+                <div class="radio-group">
+            <input type="radio" name="estado"> Casado
+            <input type="radio" name="estado"> Solteiro
+        </div>
+            </div>
+            <div>
+                <label>Idade</label>
+                <input type="number">
+            </div>
+        </div>
+
+        <label>Data de nascimento</label>
+        <input type="text">
+
+        <label>Local de nascimento</label>
+        <input type="text">
+
+       
+
+        <label>Hora da morte</label>
+        <input type="text">
+
+        <label>Local da morte</label>
+        <input type="text">
+
+        <label>Causa da morte</label>
+        <input type="text">
+
+        <label>Morte Confirmada por</label>
+        <input type="text">
+
+        <label>A filiação</label>
+        <div class="filiacao">
+            <input type="text">
+            <span>De</span>
+            <input type="text">
+        </div>
+
+        <label>Declarante</label>
+        <input type="text">
+
+        <label>Testemunha</label>
+        <input type="text">
+
+        <label>Nome do conservador</label>
+        <input type="text">
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
